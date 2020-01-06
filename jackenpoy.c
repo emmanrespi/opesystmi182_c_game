@@ -1,10 +1,18 @@
 #include <ncurses.h> // ncurses library
-/* Internal function declarations */ int rock (); int paper(); int scissors(); int reload(); /* main function */ int 
-main(void) {
+
+/* Internal function declarations */
+int rock ();
+int paper();
+int scissors();
+int reload();
+
+/* main function */
+
+int main(void) {
   initscr();
   noecho();
   curs_set(FALSE);
- 
+
   rock();
   reload();
   paper();
@@ -13,10 +21,13 @@ main(void) {
   reload();
   endwin();
   return 0;
-} 
-/* internal functions */ int reload() { refresh();
+
+/* internal functions */
+int reload()
+{ refresh();
   getch();
 }
+
 int rock (){
   mvaddstr(10, 33, " *** ");
   mvaddstr(10, 33, " ***** ");
@@ -24,7 +35,8 @@ int rock (){
   mvaddstr(12, 33, " ***** ");
   mvaddstr(13, 33, " *** ");
   mvaddstr(13, 33, " * ");
-} 
+}
+
 int paper(){
   mvaddstr(10, 33, " ****** ");
   mvaddstr(10, 33, " ****** ");
@@ -33,6 +45,7 @@ int paper(){
   mvaddstr(13, 33, " ***** ");
   mvaddstr(13, 33, " **** ");
 }
+
 int scissors(){
   mvaddstr(10, 33, " ** ** ");
   mvaddstr(10, 33, " ** ** ");
@@ -41,4 +54,4 @@ int scissors(){
   mvaddstr(13, 33, " ** ** ");
   mvaddstr(13, 33, " ** ** ");
 }
- 
+
