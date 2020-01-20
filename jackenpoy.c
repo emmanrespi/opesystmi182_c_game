@@ -107,7 +107,7 @@ int reload()
             if(computer==2){
                 printf("\nComputer: Paper\n");
                 paper();
-                printf("\nComputer Wins!\n");
+                printf("\nPlayer Wins!\n");
                 Pscore= Pscore + 1;
             }
             if(computer==1){
